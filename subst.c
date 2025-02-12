@@ -7995,7 +7995,7 @@ parameter_brace_expand_rhs (char *name, char *value,
   for (tl = l; tl; tl = tl->next)
     {
       if (tl->word && (tl->word->word == 0 || tl->word->word[0] == 0) &&
-	    (tl->word->flags | W_SAWQUOTEDNULL))
+	    (tl->word->flags & W_SAWQUOTEDNULL))
 	{
 	  t = make_quoted_char ('\0');
 	  FREE (tl->word->word);
